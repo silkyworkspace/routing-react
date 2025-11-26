@@ -1,13 +1,8 @@
 import { Link, Route, Routes } from 'react-router-dom'
-
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-
 import './App.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
-import UserDetail from './pages/UserDetail';
+import AppRouter from '.';
 
 function App() {
 
@@ -23,17 +18,15 @@ function App() {
         {/* ルートパラメーターを扱う場合 */}
         <Link to="/users/1">user01</Link>
         <Link to="/users/2">user02</Link>
+        <Link to="/dashboard">ダッシュボード</Link>
+
       </nav>
 
       {/* Routesの外にHeaderコンポーネントを入れる */}
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/users/:id" element={<UserDetail />} />
-      </Routes>
+      {/* ルーティングのコンポーネントを読み込み */}
+      <AppRouter />
 
       {/* Routesの外にFooterコンポーネントを入れる */}
       <Footer />
