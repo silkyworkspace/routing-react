@@ -21,6 +21,8 @@ export default function Header() {
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/users/1">user01</Link></li>
                     <li><Link to="/users/2">user02</Link></li>
+                    <li><Link to="/dashboard">ダッシュボード</Link></li>
+
                 </ul>
             </nav>
         </header>
